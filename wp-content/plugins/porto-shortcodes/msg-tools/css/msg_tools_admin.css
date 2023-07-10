@@ -1,0 +1,61 @@
+.categorychecklist[id^=tipo-di] .selectit input[type=checkbox],
+.categorychecklist#luogochecklist .selectit input[type=checkbox],
+.categorychecklist#mansionechecklist .selectit input[type=checkbox]{
+    visibility: hidden;
+}
+
+/*.post-php.post-type-evento .wpt-field[data-wpt-id=wpcf-priorita],*/
+.post-php.post-type-evento .wpt-field[data-wpt-id=wpcf-visibile-dal],
+.post-php.post-type-evento .wpt-field[data-wpt-id=wpcf-al],
+.post-php .wpt-field[data-wpt-id=wpcf-visualizzazione-alternativa],
+.postbox .categorydiv ul.category-tabs,
+.postbox .categorydiv .taxonomy-add-new,
+div[data-vc-shortcode=ultimate_icon_list_item] div[data-vc-shortcode-param-name=icon_type],
+div[data-vc-shortcode=ultimate_icon_list_item] .wpb_txt_icons_block input.search-icon,
+div[data-vc-shortcode=info_list_item] div[data-vc-shortcode-param-name=icon_type],
+div[data-vc-shortcode=info_list_item] .wpb_txt_icons_block input.search-icon,
+div[data-vc-shortcode=vc_tta_section] .vc_shortcode-param[data-vc-shortcode-param-name^=i_],
+div[data-vc-shortcode=vc_tta_tabs] .vc_shortcode-param,
+div[data-vc-shortcode=vc_row] li.vc_edit-form-tab-control:nth-child(n+4),
+div[data-vc-shortcode=vc_column] li.vc_edit-form-tab-control:nth-child(n+4){
+    display: none;
+}
+
+.mce-statusbar{
+    visibility: visible !important;
+}
+div[data-vc-shortcode=vc_tta_tabs] .vc_shortcode-param[data-vc-shortcode-param-name=title],
+div[data-vc-shortcode=vc_tta_tabs] .vc_shortcode-param[data-vc-shortcode-param-name=active_section],
+div[data-vc-shortcode=vc_tta_tabs] .vc_shortcode-param[data-vc-shortcode-param-name=el_id],
+div[data-vc-shortcode=vc_tta_tabs] .vc_shortcode-param[data-vc-shortcode-param-name=el_class],
+.post-php.post-type-news .wpt-field[data-wpt-id=wpcf-visualizzazione-alternativa]{
+    display: block;
+}
+
+.admin_label_section_title{
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 4px;
+    font-weight: bold;
+    display: inline-block !important;
+}
+.admin_label_section_title label{
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+}
+img.rai-avatar{
+    max-width: 32px;
+}
+.wpb_vc_row{
+    position: relative;
+    padding-top: 20px;
+}
+.wpb_vc_row .admin_label_section_title{
+    position: absolute;
+    top:0;
+}
+.mce-container.mce-panel.mce-menu,
+.mce-container.mce-panel.mce-popover{
+    z-index:2000000!important;
+}

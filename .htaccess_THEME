@@ -1,0 +1,44 @@
+#modifica per bypassare auth per immagini dei temi/plugins
+SetEnvIf Request_URI "^/wp-content/(plugins/|themes/).*(\.gif|\.png|\.jpg|\.ogg|\.mp3)$" noauth=1
+
+AuthType Kerberos
+AuthName "RAI Login"
+KrbServiceName HTTP/svilraiplace3.intranet.rai.it
+KrbMethodNegotiate On
+#KrbMethodK5Passwd Off
+KrbSaveCredentials Off
+KrbVerifyKDC Off
+KrbAuthRealms ICT.CORP.RAI.IT
+Krb5KeyTab /etc/httpd/conf/svilraiplace3.HTTP.keytab
+Require valid-user
+
+SetEnvIf Request_URI ^/wp-json/raiplace_rest/user_theme/.* noauthREST=1
+Allow from env=noauthREST
+Allow from env=REDIRECT_noauthREST
+
+
+
+
+# applico modifica
+Order Deny,Allow
+Satisfy any
+Deny from all
+Allow from env=noauth
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+<IfModule mod_headers.c>
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST,GET,OPTIONS,DELETE,PUT"
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "x-requested-with,Content-Type,origin,authorization,accept,client-security-token"
+</IfModule>

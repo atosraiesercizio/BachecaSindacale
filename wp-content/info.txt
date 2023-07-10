@@ -1,0 +1,1 @@
+/clusterfs/prod/webapp/intranet.rai.it/devraiplace3/wp-content

@@ -1,0 +1,15 @@
+#modifica per bypassare auth per immagini dei temi/plugins
+##SetEnvIf Request_URI "^/wp-content/(plugins/|themes/).*(\.gif|\.png|\.jpg|\.ogg|\.mp3)$" noauth=1
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+AuthType None
+Require all granted
+

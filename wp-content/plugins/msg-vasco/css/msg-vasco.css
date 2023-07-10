@@ -1,0 +1,46 @@
+#mvasco_wrapper button span{
+    font-size: 1.3em;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+#mvasco_wrapper h3,
+#mvasco_wrapper h2{
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom:16px;
+}
+#mvasco_wrapper h2{
+    font-size: 28px;
+}
+#content #mvasco_wrapper input[type="text"]{
+    width: auto;
+    min-width: 320px;
+}
+#content #mvasco_wrapper input[type="text"],
+#content #mvasco_wrapper button{
+    margin:6px 6px 6px 0;
+}
+#mvasco_wrapper .big{
+    font-size: 1.2em;
+    color: #475358;
+    font-weight: 600;
+}
+#mvasco_wrapper .form-inline{
+    margin: 6px 0;
+}
+:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   visibility: hidden;
+    opacity: 0;
+}
+:focus::-moz-placeholder { /* Firefox 19+ */
+    visibility: hidden;
+    opacity: 0;
+}
+:focus:-ms-input-placeholder { /* IE 10+ */
+    visibility: hidden;
+    opacity: 0;
+}
+:focus:-moz-placeholder { /* Firefox 18- */
+    visibility: hidden;
+    opacity: 0;
+}

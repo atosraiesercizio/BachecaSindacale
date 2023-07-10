@@ -1,0 +1,21 @@
+div.container-fluid {
+    padding-left: 0;
+}
+
+.nadi-input-fullwidth {
+    width: 100%;
+}
+
+.nadi-icon-inside-button {
+    padding-top: 4px;
+}
+
+.nadi-user-list-custom-column th {
+    text-align: center;
+}
+
+.nadi-user-list-align-checkbox {
+    text-align: center;
+    vertical-align: middle;
+}
+
